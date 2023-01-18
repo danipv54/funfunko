@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+li{
+  list-style: none;
+}
+
+.cardImage {
+  float: left;
+  width:  250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.cardImageDetails {
+  float: left;
+  padding: 1rem;
+  width:  290px;
+  height: 290px;
+  object-fit: contain;
+}
+
+.flag-container{
+  position: relative;
+}
+
+.flag{
+  position: absolute;
+    z-index: 1;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #fff;
+    left: -1rem;
+    top: -4rem;
+    width: auto;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0.125rem 1.75rem 0.100rem 0.66rem;
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+    border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.heroe-img{
+
+  padding-right: 1rem;
+  width:  400px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.each-slide-effect > div {
+  height: 50px;
+}
+
+
+.avatar{
+  position: relative;
+ width: 140px;
+ height: 130px;
+ background: fixed;
+ border-radius: 50%;
+
+ /* background-size: cover; */
+ vertical-align: middle;
+
+}
+
+.pencil{
+  /* z-index: 1; */
+  position: absolute; 
+  align-self: flex-end;
+}
+
