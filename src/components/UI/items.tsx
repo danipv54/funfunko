@@ -46,7 +46,6 @@ export const Item = ({ slug }: { slug: any }) => {
     }
 
     setCart.push(cartItem)
-    console.log(setCart)
   }
 
 

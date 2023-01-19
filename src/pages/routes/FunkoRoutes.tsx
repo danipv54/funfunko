@@ -1,9 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { FooterLayout, Navbar } from '../../components';
 import { CartPage, EmptyCartPage } from '../cart';
 import { AnimePage, HeroesVillainsPage, NFTPage } from '../category';
 import { HomePage } from '../home/Home';
-import { NoFound } from '../noFoundPage/NoFound';
 import { ProductPage } from '../products';
 import { SearchPage } from '../search';
 import { OrderHistoryPage, User, UserPage } from '../user';
@@ -22,7 +21,7 @@ function FunkoRoutes() {
                 <Route path="search/:item" element={<SearchPage />} />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/empty" element={<EmptyCartPage />} />
-                <Route path="*" element={<NoFound />} />
+                <Route path="/*" element={<Navigate to={'/funko'} replace={true}/>} />
                 
                 <Route path="user" element={<UserPage />} >
                     <Route path="profile" element={<User />} />

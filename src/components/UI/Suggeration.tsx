@@ -23,7 +23,7 @@ export const Suggeration = ({ funkos, company, funkoShown }: Props) => {
           Suggeration.map((funko: Ifunko) =>
 
           (
-            <Link to={`/products/${funko.slug}`} key={funko.slug}>
+            <Link to={`products/${funko.slug}`} key={funko.slug} replace>
               <div className='sm:mt-4 mb-4 ml-8 transition ease-in-out delay-150 hover:scale-110'
                 key={funko.title}>
 

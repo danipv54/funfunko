@@ -2,10 +2,10 @@ import { useNavigate } from 'react-router-dom';
 
 export const  NoFound=() =>{
   let navigate = useNavigate();
-  setTimeout(() => {
-    navigate('/', { replace: true })
+  // setTimeout(() => {
+  //   navigate('/funko', { replace: true })
 
-  }, 3000);
+  // }, 3000);
 
   return (
     <>

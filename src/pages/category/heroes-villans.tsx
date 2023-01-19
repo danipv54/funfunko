@@ -15,7 +15,7 @@ export const HeroesVillainsPage = () => {
           ? <LoadingScreen />
           : (
             funkos.map((funkoitem: Ifunko) => (
-              <Link to={`/products/${funkoitem.slug}`} key={funkoitem.slug}>
+              <Link to={`/funko/products/${funkoitem.slug}`} key={funkoitem.slug} replace>
                 <Card funko={funkoitem} />
               </Link>
             ))

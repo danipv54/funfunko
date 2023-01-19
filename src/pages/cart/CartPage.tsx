@@ -1,17 +1,16 @@
-import { useContext } from "react"
-import { useNavigate } from "react-router-dom";
-import { UIContext } from "../../contexts"
+import { useContext } from "react";
+import { UIContext } from "../../contexts";
+import { EmptyCartPage } from "./EmptyCartPage";
 
 export const CartPage = () => {
   const { setCart } = useContext(UIContext);
-  let navigate = useNavigate();
+
 
   if (!setCart.length) {
-    setTimeout(() => {
-      navigate('/', { replace: true })
-    }, 3000);
-
-    return;
+    
+    return (
+      <EmptyCartPage></EmptyCartPage>
+    );
   }
 
 

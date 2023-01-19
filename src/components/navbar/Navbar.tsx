@@ -13,9 +13,9 @@ export const Navbar = () => {
 
   const activatePath = (path: string): any => {
     if (path === pathname) {
-      return ' text-xl text-slate-50 font-black hover:text-indigo-500 ';
+      return 'text-xl text-slate-50 font-black hover:text-indigo-500 ';
     }
-    return ' text-xl hover:text-indigo-500  text-slate-200 font-semi-bold';
+    return 'text-xl hover:text-indigo-500  text-slate-200 font-semi-bold';
   }
 
   return (
@@ -24,7 +24,7 @@ export const Navbar = () => {
       shadow-2xl justify-between mx-auto py-5 px-5'>
 
         <div className='flex space-x-24'>
-          <NavLink to="/" >
+          <NavLink to="/home" replace >
             <div >
               <img src="https://www.funko.com/static/media/funko-logo-white.445c4f62.svg" alt="logo" />
             </div>
@@ -32,24 +32,24 @@ export const Navbar = () => {
 
           <nav className='flex space-x-8'>
             <li className={activatePath('/')}  >
-              <NavLink to="/" >
+              <NavLink to="" replace={true} >
                 Home
               </NavLink>
             </li>
             <li className={activatePath('/anime')} >
-              <NavLink to="/anime">
+              <NavLink to="anime" replace={true}>
                 Anime
               </NavLink >
             </li>
 
             <li className={activatePath('/heroes-villians')}  >
-              <NavLink to="/heroes-villians">
+              <NavLink to="heroes-villians" replace={true} state="" >
                 Heroes & Villains
               </NavLink>
             </li>
 
             <li className={activatePath('/nft')} >
-              <NavLink to="/nft">
+              <NavLink to="nft" replace={true} state="/nft">
                 NFT
               </NavLink>
             </li>
@@ -59,7 +59,7 @@ export const Navbar = () => {
         <div className='flex space-x-6'>
           <Search />
 
-          <NavLink to="/user/profile">
+          <NavLink to="/funko/user/profile">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 
               text-indigo-50"> <path fillRule="evenodd" d="M18.685 19.097A9.723 9.723 0 
               0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 
@@ -69,7 +69,7 @@ export const Navbar = () => {
             </svg>
           </NavLink>
 
-          <NavLink to="/cart">
+          <NavLink to="funko/cart" replace>
             <div className="relative">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 className="w-6 h-6 text-indigo-50"> <path fillRule="evenodd" d="M7.5 
@@ -132,25 +132,25 @@ export const Navbar = () => {
 
             <nav className=' flex flex-col space-y-2'>
               <li className='text-lg hover:text-indigo-300  text-slate-200 font-bold'  >
-                <NavLink to="/">
+                <NavLink to="home" replace>
                   Home
                 </NavLink>
               </li>
 
               <li className='text-lg hover:text-indigo-300  text-slate-200 font-bold' >
-                <NavLink to="/anime">
+                <NavLink to="anime" replace>
                   Anime
                 </NavLink>
               </li>
 
               <li className='text-lg hover:text-indigo-300  text-slate-200 font-bold'  >
-                <NavLink to="/heroes-villians">
+                <NavLink to="heroes-villians" replace>
                   Heroes & Villains
                 </NavLink>
               </li>
 
               <li className='text-lg hover:text-indigo-300  text-slate-200 font-bold' >
-                <NavLink to="/nft">
+                <NavLink to="nft" replace>
                   NFT
                 </NavLink>
               </li>
@@ -164,11 +164,11 @@ export const Navbar = () => {
             <div className='flex '>
               <nav className='flex flex-col space-y-3'>
 
-                <NavLink to="user/profile">
+                <NavLink to="user/profile" replace>
                   <p className='text-lg hover:text-indigo-300  text-slate-200 font-bold'>Profile</p>
                 </NavLink>
 
-                <NavLink to="/cart">
+                <NavLink to="cart" replace>
                   <p className='text-lg hover:text-indigo-300  text-slate-200 font-bold'>Cart</p>
                 </NavLink>
               </nav>
