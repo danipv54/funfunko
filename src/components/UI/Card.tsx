@@ -21,7 +21,7 @@ export const Card: FC<Props> = ({ funko }) => {
           : <></>
         }
 
-        <img className='mb-4 cardImage' src={funko.images[0]} alt={funko.title} />
+        <img className='mb-4 cardImage' src={funko.images[0]} alt={funko.title} loading="lazy" />
         <h3 className='text-black font-bold text-lg'> {getTitle(funko.title)}</h3>
         <span>$ {funko.price}</span>
       </div>

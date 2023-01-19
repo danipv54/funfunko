@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Ifunko } from '../interface/IFunko';
 
 const fetchData = async (): Promise<Ifunko[]> => {
-    const res = await fetch(`https://funkos-5vkejquua-danipv54.vercel.app`);
+    const res = await fetch(`${import.meta.env.VITE_BASE_URL}`);
     return await res.json()
   }
   
