@@ -13,7 +13,7 @@ export const Search = () => {
 
     if (searchTerm.length == 0) return;
 
-    navigate(`/search/${searchTerm.toLowerCase()}`, { replace: true })
+    navigate(`search/${searchTerm.toLowerCase()}`, { replace: true })
     onResetForm();
   }
 

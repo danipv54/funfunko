@@ -5,7 +5,7 @@ export const AppRouter = () => {
     return (
         <>
             <Routes>
-               <Route path='/funko/*'  element={ <FunkoRoutes></FunkoRoutes>}/>
+               <Route path='/*'  element={ <FunkoRoutes></FunkoRoutes>}/>
             </Routes>
 
         </>

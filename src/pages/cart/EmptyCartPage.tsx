@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 export const EmptyCartPage = () => {
   let navigate = useNavigate();
 
-useEffect(() => {
+
   setTimeout(() => {
-    navigate('/funko', { replace: true })
+    navigate('/', { replace: true })
   }, 3000);
 
 
-}, [])
+
 
 
   return (

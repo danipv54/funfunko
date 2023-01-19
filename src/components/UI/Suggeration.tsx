@@ -14,7 +14,7 @@ export const Suggeration = ({ funkos, company, funkoShown }: Props) => {
   const { Suggeration } = useSuggeration(funkos, company, funkoShown)
 
 
-  return (
+  return ( 
     <div className='bg-white sm:12 md:mt-32'>
       <h1 className='sm:text-xl md:text-4xl pl-4 font-bold text-center'> People also buy</h1>
       <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1
@@ -23,7 +23,7 @@ export const Suggeration = ({ funkos, company, funkoShown }: Props) => {
           Suggeration.map((funko: Ifunko) =>
 
           (
-            <Link to={`products/${funko.slug}`} key={funko.slug} replace>
+            <Link to={`/products/${funko.slug}`} key={funko.slug} replace>
               <div className='sm:mt-4 mb-4 ml-8 transition ease-in-out delay-150 hover:scale-110'
                 key={funko.title}>
 

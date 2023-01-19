@@ -21,7 +21,7 @@ function FunkoRoutes() {
                 <Route path="search/:item" element={<SearchPage />} />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/empty" element={<EmptyCartPage />} />
-                <Route path="/*" element={<Navigate to={'/funko'} replace={true}/>} />
+                <Route path="/*" element={<Navigate to={'/'} replace={true}/>} />
                 
                 <Route path="user" element={<UserPage />} >
                     <Route path="profile" element={<User />} />

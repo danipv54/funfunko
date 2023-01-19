@@ -6,7 +6,7 @@ export const CartPage = () => {
   const { setCart } = useContext(UIContext);
 
 
-  if (!setCart.length) {
+  if (!Boolean(setCart.length)) {
     
     return (
       <EmptyCartPage></EmptyCartPage>

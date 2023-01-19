@@ -29,7 +29,7 @@ export const SearchPage = () => {
             ? <LoadingScreen />
             : (
               funkos.map((funkoItem: Ifunko) => (
-                <Link to={`/funko/products/${funkoItem.slug}`} key={funkoItem.slug} replace>
+                <Link to={`/products/${funkoItem.slug}`} key={funkoItem.slug} replace>
                   <Card funko={funkoItem} />
                 </Link>
               ))
