@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import { Ifunko } from '../interface/IFunko';
 
-const fetchData = async (page: number): Promise<Ifunko[]> => {
+const fetchData = async (page: number=1): Promise<Ifunko[]> => {
   let res = await fetch(`${import.meta.env.VITE_BASE_URL}?_page=${page}&_limit=10`);
   return await res.json();
 }
