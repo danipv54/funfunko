@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Ifunko } from '../interface/IFunko';
 
 const fetchData = async (page: number): Promise<Ifunko[]> => {
-  let res = await fetch(`${import.meta.env.VITE_BASE_URL}/products?_page=${page}&_limit=10`);
+  let res = await fetch(`https://funkos-api-vrkk-ma9p7othf-danipv54.vercel.app/products?_page=${page}&_limit=10`);
   return await res.json();
 }
 
